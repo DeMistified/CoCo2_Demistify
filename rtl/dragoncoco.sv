@@ -280,12 +280,12 @@ rom_ext rom8(
   .dout(rom8_dout_tandy),
   .cs(~rom8_cs)
 );
-dragon_ext rom8_D(
-  .clk(clk),
-  .addr(cpu_addr[12:0]),
-  .dout(rom8_dout_dragon),
-  .cs(~rom8_cs)
-);
+//dragon_ext rom8_D(
+//  .clk(clk),
+//  .addr(cpu_addr[12:0]),
+//  .dout(rom8_dout_dragon),
+//  .cs(~rom8_cs)
+//);
 
 
 assign romA_dout = dragon ?  romA_dout_dragon : romA_dout_tandy;
@@ -300,12 +300,12 @@ rom_bas romA(
   .cs(~romA_cs)
 );
 
-dragon_bas romA_D(
-  .clk(clk),
-  .addr(cpu_addr[12:0]),
-  .dout(romA_dout_dragon),
-  .cs(~romA_cs )
- );
+//dragon_bas romA_D(
+//  .clk(clk),
+//  .addr(cpu_addr[12:0]),
+//  .dout(romA_dout_dragon),
+//  .cs(~romA_cs )
+// );
 
  
  
@@ -325,35 +325,35 @@ wire [7:0] romA_64_1;
 wire [7:0] romA_64_2;
 
  
-dragon_ext64 rom8_D64_1(
-  .clk(clk),
-  .addr(cpu_addr[12:0]),
-  .dout(rom8_64_1),
-  .cs(~rom8_cs)
-);
- 
-dragon_bas64 romA_D64_1(
-  .clk(clk),
-  .addr(cpu_addr[12:0]),
-  .dout(romA_64_1),
-  .cs(~romA_cs )
- );
-
-dragon_alt_ext64 rom8_D64_2(
-  .clk(clk),
-  .addr(cpu_addr[12:0]),
-  .dout(rom8_64_2),
-  .cs(~rom8_cs)
-);
- 
-dragon_alt_bas64 romA_D64_2(
-  .clk(clk),
-  .addr(cpu_addr[12:0]),
-  .dout(romA_64_2),
-  .cs(~romA_cs )
- );
- 
- 
+//dragon_ext64 rom8_D64_1(
+//  .clk(clk),
+//  .addr(cpu_addr[12:0]),
+//  .dout(rom8_64_1),
+//  .cs(~rom8_cs)
+//);
+// 
+//dragon_bas64 romA_D64_1(
+//  .clk(clk),
+//  .addr(cpu_addr[12:0]),
+//  .dout(romA_64_1),
+//  .cs(~romA_cs )
+// );
+//
+//dragon_alt_ext64 rom8_D64_2(
+//  .clk(clk),
+//  .addr(cpu_addr[12:0]),
+//  .dout(rom8_64_2),
+//  .cs(~rom8_cs)
+//);
+// 
+//dragon_alt_bas64 romA_D64_2(
+//  .clk(clk),
+//  .addr(cpu_addr[12:0]),
+//  .dout(romA_64_2),
+//  .cs(~romA_cs )
+// );
+// 
+// 
 
 
 // there must be another solution
